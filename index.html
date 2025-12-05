@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>泉州恒远德纸制品有限公司 | Quanzhou Hengyuande Paper Products Co., Ltd.</title>
+
+  <style>
+    :root{
+      --accent:#1b5e20;       /* 深绿色主色 */
+      --accent-light:#4caf50; /* 较亮的绿色 */
+      --bg-overlay:rgba(255,255,255,0.85);
+      --text:#0f1724;
+      --muted:#4a6454;
+      --card:#ffffff;
+      --radius:10px;
+      font-family: Arial, sans-serif;
+    }
+
+    *{box-sizing:border-box;}
+
+    body{
+      margin:0;
+      background-image:url("https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=1500&q=80");
+      background-size:cover;
+      background-attachment:fixed;
+      background-position:center;
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+    }
+
+    .overlay{
+      background:var(--bg-overlay);
+      min-height:100vh;
+      padding:20px;
+    }
+
+    .container{
+      max-width:1100px;
+      margin:0 auto;
+      padding:20px;
+    }
+
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding-bottom:20px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .brand img{
+      width:70px;
+      height:70px;
+      object-fit:contain;
+    }
+
+    h1{
+      margin:0;
+      font-size:22px;
+      color:var(--accent);
+    }
+
+    .btn{
+      border:1px solid var(--accent);
+      background:white;
+      padding:8px 14px;
+      border-radius:6px;
+      cursor:pointer;
+    }
+
+    .btn.active{
+      background:var(--accent);
+      color:white;
+    }
+
+    .card{
+      background:var(--card);
+      padding:18px;
+      border-radius:12px;
+      margin-bottom:16px;
+      box-shadow:0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    footer{
+      text-align:center;
+      padding:20px;
+      font-size:14px;
+      color:var(--muted);
+    }
+  </style>
+</head>
+
+<body>
+<div class="overlay">
+  <div class="container">
+
+    <!-- Header -->
+    <header>
+      <div class="brand">
+        <!-- 加入你的 LOGO（本地路径引用） -->
+        <img src="/mnt/data/024128FA-21C8-4381-B50A-15AC8524681B.jpeg" alt="Hengyuande Logo">
+        <div>
+          <h1 data-zh>泉州恒远德纸制品有限公司</h1>
+          <h1 data-en style="display:none">Quanzhou Hengyuande Paper Products Co., Ltd.</h1>
+        </div>
+      </div>
+
+      <!-- Language Switch -->
+      <div>
+        <button class="btn active" id="btn-zh">中文</button>
+        <button class="btn" id="btn-en">EN</button>
+      </div>
+    </header>
+
+    <!-- Company Profile -->
+    <section class="card">
+      <h2 data-zh>公司简介</h2>
+      <h2 data-en style="display:none">Company Profile</h2>
+
+      <p data-zh>
+        泉州恒远德纸制品有限公司是一家专业从事生活用纸生产与加工的现代化企业，深耕纸制品行业超过十年，产品涵盖厨房纸、卷筒卫生纸、抽纸、餐巾纸等。
+      </p>
+
+      <p data-en style="display:none">
+        Quanzhou Hengyuande Paper Products Co., Ltd. is a modern manufacturer specializing in household paper production for over ten years, offering kitchen rolls, toilet paper, facial tissues, napkins and more.
+      </p>
+    </section>
+
+    <!-- Contact -->
+    <section class="card">
+      <h2 data-zh>联系我们</h2>
+      <h2 data-en style="display:none">Contact Us</h2>
+
+      <p data-zh>
+        地址：晋江市中华路与泉源路交叉口南280米<br>
+        中国电话：+86 15805074611<br>
+        欧洲客服电话：+46 793132696<br>
+        邮箱：huanglimei@hengyuande.cn
+      </p>
+
+      <p data-en style="display:none">
+        Address: 280m south of Zhonghua Rd & Quanyuan Rd intersection, Jinjiang, Fujian, China<br>
+        China Phone: +86 15805074611<br>
+        Europe Service: +46 793132696<br>
+        Email: huanglimei@hengyuande.cn
+      </p>
+    </section>
+
+    <footer>
+      © <span id="year"></span> 泉州恒远德纸制品有限公司
+    </footer>
+
+  </div>
+</div>
+
+<script>
+  const zh = document.querySelectorAll("[data-zh]");
+  const en = document.querySelectorAll("[data-en]");
+  document.getElementById("btn-zh").onclick = ()=>{
+    zh.forEach(el=>el.style.display="block");
+    en.forEach(el=>el.style.display="none");
+    btnZh.classList.add("active");
+    btnEn.classList.remove("active");
+  }
+  document.getElementById("btn-en").onclick = ()=>{
+    zh.forEach(el=>el.style.display="none");
+    en.forEach(el=>el.style.display="block");
+    btnEn.classList.add("active");
+    btnZh.classList.remove("active");
+  }
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
