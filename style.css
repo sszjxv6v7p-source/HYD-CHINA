@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5fbf5;
+    color: #2f3e2f;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: #e0f5e2;
+    border-bottom: 2px solid #cbe8cf;
+}
+
+.logo {
+    height: 50px;
+}
+
+nav a {
+    margin: 0 12px;
+    font-weight: bold;
+    color: #2f5733;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(#9edfa3, #6ec783);
+    color: white;
+}
+
+section {
+    padding: 50px 40px;
+}
+
+h2 {
+    color: #1b8f3b;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #e0f5e2;
+    border-top: 2px solid #cbe8cf;
+}
