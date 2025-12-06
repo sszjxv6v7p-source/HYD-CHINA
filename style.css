@@ -1,0 +1,97 @@
+:root {
+  --green-main: #1b8f3b;
+  --green-light: #e3f6e6;
+  --green-bg: #f4fbf5;
+  --text-main: #263326;
+  --text-muted: #556655;
+  --border-soft: #d5e9d7;
+  --shadow-soft: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  background: var(--green-bg);
+  color: var(--text-main);
+}
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(227,246,230,0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 50px;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.brand-cn {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.main-nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.main-nav a:hover {
+  color: var(--green-main);
+}
+
+.lang-switch button {
+  border: 1px solid var(--border-soft);
+  background: white;
+  padding: 4px 10px;
+  border-radius: 14px;
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("images/factory-front.jpg") center/cover no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(0,0,0,0.55), rgba(
