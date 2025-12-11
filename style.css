@@ -1,0 +1,270 @@
+/* ===================== 全局 Global ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f3f8f2;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===================== Header 顶部导航 ===================== */
+.site-header {
+  width: 100%;
+  background: #e3f2e5;
+  padding: 15px 20px;
+  border-bottom: 1px solid #d0e6d5;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 55px;
+  height: auto;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-cn {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.brand-en {
+  font-size: 13px;
+  color: #666;
+}
+
+.main-nav {
+  display: flex;
+  gap: 30px;
+}
+
+.main-nav a {
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.main-nav a:hover {
+  color: #1ea463;
+}
+
+.lang-switch button {
+  padding: 6px 14px;
+  background: #ffffff;
+  border: 1px solid #cfe8d2;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.lang-switch button:hover {
+  background: #e7f7ec;
+}
+
+/* ===================== 首页 Banner ===================== */
+.hero {
+  width: 100%;
+  height: 380px;
+  background: url("images/factory-front.jpg") center/cover no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.hero-tagline {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.btn.primary {
+  margin-top: 20px;
+  background: #1ea463;
+  color: white;
+  padding: 10px 26px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.btn.primary:hover {
+  background: #188c54;
+}
+
+/* ===================== Section 全局容器 ===================== */
+.section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+.section-alt {
+  background: #f7fbf5;
+}
+
+/* ===================== About 区块 ===================== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* ===================== 产品卡片 ===================== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.card {
+  padding: 20px;
+  background: #f8fdf7;
+  border: 1px solid #dcefe3;
+  border-radius: 12px;
+}
+
+.card h3 {
+  color: #1ea463;
+  margin-bottom: 10px;
+}
+
+/* ===================== 工厂实景展示 ===================== */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.photo-card {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  border: 1px solid #dcefe3;
+  text-align: center;
+}
+
+.photo-card img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.photo-card p {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #1ea463;
+}
+
+/* ===================== 工厂实力 ===================== */
+.factory-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.factory-image img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* ===================== 联系方式 ===================== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/* ===================== Footer ===================== */
+.site-footer {
+  text-align: center;
+  padding: 25px;
+  color: #666;
+  font-size: 14px;
+}
+
+/* ===================== 手机版适配 ===================== */
+@media (max-width: 768px) {
+  .about-grid,
+  .factory-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main-nav {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .main-nav a {
+    font-size: 14px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content h1 {
+    font-size: 24px;
+  }
+
+  .main-nav a {
+    font-size: 13px;
+  }
+}
