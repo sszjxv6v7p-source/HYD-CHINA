@@ -1,0 +1,154 @@
+/* 基础设置 */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Microsoft YaHei", Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header 区域 */
+.site-header {
+  background-color: #c8e6c9;
+  padding: 10px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 60px;
+  margin-right: 15px;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-cn {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.brand-en {
+  font-size: 12px;
+}
+
+.main-nav a {
+  margin-left: 20px;
+  font-size: 18px;
+}
+
+.lang-btn {
+  margin-left: 15px;
+  padding: 4px 8px;
+  font-size: 14px;
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* 视频横幅 */
+.video-banner {
+  width: 100%;
+  height: auto;
+  margin-bottom: 40px;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 介绍区块（此处已按你要求放大文字） */
+.intro-section {
+  width: 85%;
+  margin: 40px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.intro-section img {
+  width: 45%;
+  border-radius: 10px;
+}
+
+/* ⭐右侧文字已放大为20px，不改变布局 */
+.intro-text {
+  width: 48%;
+  font-size: 20px;     /* 原来是16px → 现在更大更清晰 */
+  line-height: 1.9;    /* 原来1.8 → 更舒适 */
+}
+
+.intro-text ul {
+  padding-left: 20px;
+}
+
+.intro-text li {
+  margin-bottom: 10px;
+}
+
+/* 产品区块 */
+.product-section {
+  width: 85%;
+  margin: 60px auto;
+}
+
+.product-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.product-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.product-item {
+  width: 22%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.product-item img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.product-item h3 {
+  margin-top: 12px;
+  font-size: 18px;
+}
+
+/* Footer 底部 */
+.footer {
+  margin-top: 60px;
+  padding: 20px 0;
+  text-align: center;
+  background-color: #333;
+  color: white;
+  font-size: 14px;
+}
